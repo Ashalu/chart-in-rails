@@ -1,4 +1,4 @@
-<%= column_chart @h.map{|r| [r[0], r[1]] } %>
+<%= column_chart @hash_of_data.map{|r| [r[0], r[1]] } %>
 <table>
 	<thead>
 		<tr>
@@ -7,13 +7,13 @@
 		</tr>
 	</thead>
 	<tbody>
-		<% @h.each.with_index do |data| %>
+		<% @hash_of_data.each.with_index do |data| %>
 		<tr>
 			<td>
 			<%= data[0] %></td>
 			<td>
 			<%= data[1] %>
-			</td></tr>>
+			</td></tr>
 		<% end %>
 	</tbody>
 </table>
